@@ -45,12 +45,40 @@ of complex network measures and large-scale neuroanatomical connectivity dataset
 在构建好网络后需要对此网络进行评估分析，但是直接从上述表示中很难获得直接有效的复杂网络信息，因此文章给出了一些测度（Measures）用于表示
 复杂网络的特征，下面是文章中给出的一些复杂网络测度。虽然这些测度是针对于脑网络的，但是仍然可以扩展到其他类型的复杂网络，例如社交网络等。
 
----
-| 测度 | 0-1无向定义 | 权重有向定义 |
---|--|:--:
-基本概念和标记|N是网络所有节点的集合，n是节点的数量，(i,j)则是节点i和j之间的连接，a<sub>ij</sub>是i和j之间的连接状态，当(i,j)存在时a<sub>ij</sub>=1，否则a<sub>ij</sub>=0|连接（i,j）之间的权重为w<sub>ij</sub>
-度：连接到某个节点的数量||
----
+- 基本的概念与记号：N表示复杂网络中所有节点的集合，n代表的是集合N中包含的节点数量；L表示复杂网络中所有连接的集合，l代表的是集合L中包含的连接个数；（i,j）记为节点i，j之间的连接，其中i,j属于集合N；a<sub>ij</sub>表示的是i，j之间的连接状态，1表示存在着连接，0则表示不存在连接，这是0-1无向定义；若认为连接值在0～1之间，那么将其记作w<sub>ij</sub>，且w<sub>ij</sub>在0，1之间。
+- 常用的测度：节点的度（Degree），节点i和j之间最短路径距离(Shortest path distance)，三角形数（Number of trianles），特征路径长度（Characteristic path length），全局效率(Global Efficiency)，聚类悉数（Clustering Coefficient），传递性(Transivity)，局部效率(Local Efficiency),模块化性能（Modularity），中心化程度(Closeness centraity),中介中心化程度(betweeness centrality)，模块内节点度(Within-module degree z-score)，参与系数(Participation coeffecient)，网络主题(Network motifs),主题z-score系数(Motif z-score),主题指纹(Motif fingerprint)，分布度(Degree Distribution)，平均邻度(Average Neighbor Degree)，同类性系数(Assortativity coefficient)
+
+为了分析复杂网络的功能与特性，可以使用上述测度对网络进行评测。例如评估复杂网络的弹性，可以通过分布度(Degree Distribution)来评估网络的弹性。具有幂律度分布的复杂网络可能对逐渐随机恶化具有弹性，但很容易受到高度中心节点的破坏。大多数现实生活中的网络都没有完美的幂律度分布。另一方面，许多网络具有局部表现为幂律的度分布。其中分布度的计算方式如下所示：
+<div align=center><img src="./degree_distribution.png"></div>
+其中P(k')是该节点的度为k'的概览。此外Average Neighbot Degree和 Assortativity coefficient都可以用于评估网络的弹性，不过与分布度考虑的角度不同。
+
+# 论文复现
+文章提供了一个Matlab的脑连接性分析工具，基于此做了一些对于复杂网络分析的实验，代码见src
+
+# 可视化分析
+首先我们可视化连接矩阵，其对应的图像如下所示，其包含了32个节点，故连接矩阵的维度是32*32，图中白色的点对应的是存在的连接，黑色的对应的是不存在的连接。
+<div align=center><img src="./link_matrics.jpg" width="50%" height="50%"></div>
+我们首先分析了每个节点的度，其结果如下表所示
+
+节点|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|
+ :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--|:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+度|8|9|13|9|11|19|2|6|15|16|5|11|5|10|9|7
+
+节点|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32
+:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--|:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+度|9|5|10|6|16|13|17|7|10|10|0|0|9|16|19|13
+
+节点6的度最大为19，节点27和28的度最小为0（意味着没有连接）。然后我们分析了每个节点的聚类情况，用聚类系数了评测该性能，得到的结果如下图所示，与度数的分布结果相类似，节点27和28的聚类效应最为明显，节点6则最弱。
+<div align=center><img src="./clustering_coef.jpg" width="50%" height="50%"></div>
+
+为了对不同的复杂网络进行对比，我们对30*30的连接矩阵也进行了分析，其连接矩阵如下所示
+<div align=center><img src="./link_matrics_30x30.jpg" width="50%" height="50%"></div>
+我们计算了两个网络的Transitivity，得到的结果分别为0.4945(30x30)和0.4883(32x32)，可以看到的是节点数越少网络的传递性就越好，这也和实际的情况相符合。
+
+同样地，我们计算了两个网络的同类性系数(Assortativity)，30x30的网络同类性系数为-0.0735，而32x32的同类性网络洗漱为-0.1061，节点数越多同类性的概率就越低。
+
+# 总结
+该文章更多的是一种综述性质的讲解，主要分析和研究了复杂网络的构造以及其相关测度的计算和使用，但是其应用层面上还不够具体实际，例如从脑部的MRI图构建出大规模的连接矩阵用于分析脑部的功能或者诊断，这是需要进一步研究和实现的。
 
 
 
