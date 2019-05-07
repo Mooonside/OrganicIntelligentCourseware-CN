@@ -31,7 +31,16 @@ The identification of influential nodes in complex network can be very challengi
 
 ![图2](figure2.png)
 
-为了能够更好地区分这些形态，作者引入了崭新的聚类系数的计算方法。
+为了能够更好地区分这些形态，作者引入了崭新的聚类系数的计算方法。他们为图2的四种六节点圈的结构各提出了一种新的聚类系数。
+
+对于无连接的六节点图（unconnected 6-cycle），它对应的无连接聚类系数定义如下：
+
+$$
+cc_{(0)} = \frac{\lambda_{(0)^{*}}} {\lambda_{(0)}
+$$
+
+
+
 
 
 
