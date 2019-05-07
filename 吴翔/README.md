@@ -33,7 +33,7 @@ We propose and study a set of algorithms for discovering community structure in 
 
 - 基本概念
 
-betweenness："介数"，解释为连接社团之间（而不是社团内部）节点的度量。
+**betweenness："介数"**，解释为连接社团之间（而不是社团内部）节点的度量。
 
 betweenness的常见计算方法有：
 
@@ -45,7 +45,7 @@ betweenness的常见计算方法有：
 
 ![电阻电流模型](./1.png)
 
-modularity：模块度，用于评估网络划分结果的质量，用符号Q表示。
+**modularity：模块度**，用于评估网络划分结果的质量，用符号Q表示。
 
 衡量一个社区划分好坏的标准。一个相对好的结果在社区内部的节点相似度较高，而在社区外部节点的相似度较低。
 
