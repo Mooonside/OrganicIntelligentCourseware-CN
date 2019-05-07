@@ -36,7 +36,7 @@ The identification of influential nodes in complex network can be very challengi
 对于无连接的六节点图（unconnected 6-cycle），它对应的无连接聚类系数定义如下：
 
 $$
-cc_{(0)} = \frac{\lambda_{(0)^{*}}} {\lambda_{(0)}
+cc_{0} = \frac{\lambda_{(0)^{*}}}{\lambda_{(0)}}
 $$
 
 
