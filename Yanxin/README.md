@@ -4,8 +4,9 @@
  - 学号：21821130
  - 主题：复杂网络（ComplexNetworks）
  
- 论文选题：Complex Network Measures for Data Set Characterization
- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6726419
+ ### 选择论文
+ 
+ [Complex Network Measures for Data Set Characterization](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6726419)
  
  Abstract:This paper investigates the adoption of measures used to evaluate complex networks properties 
  in the characterization of the complexity of data sets in machine learning applications. These measures
