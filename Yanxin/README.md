@@ -1,6 +1,9 @@
- 姓名：严薪
- 邮箱：yan_xin@zju.edu.cn
- 学号：21821130
+ ### 个人信息
+ - 姓名：严薪
+ - 邮箱：yan_xin@zju.edu.cn
+ - 学号：21821130
+ - 主题：复杂网络（ComplexNetworks）
+ 
  论文选题：Complex Network Measures for Data Set Characterization
  https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6726419
  
