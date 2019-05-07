@@ -69,8 +69,9 @@ modularity：模块度，用于评估网络划分结果的质量，用符号Q表
 
 Girvan和Newman提出的算法是社区发现中的第一个算法，其准确度较高，能揭示复杂网络的层次结构。但是，它的时间复杂度太高，而且对于不好的划分，无法回溯地进行修正。
 
-- 代码复现
-代码来自用于分析图和网络的MATLAB工具[octave-networks-toolbox](https://github.com/aeolianine/octave-networks-toolbox)，将运行的结果通过txt保存下来，再转换成json用于可视化。代码见src目录。
+# 代码复现
+
+Newman Girvan算法的代码来自用于分析图和网络的MATLAB工具[octave-networks-toolbox](https://github.com/aeolianine/octave-networks-toolbox)。该算法使用最短路介数，输入邻接矩阵和划分数目，输出划分集合和模块度。我们将运行的结果通过txt保存下来，再转换成json用于可视化。代码见src目录。
 
 - 实例运行结果
 
