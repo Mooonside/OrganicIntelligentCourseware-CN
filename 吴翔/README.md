@@ -81,10 +81,15 @@ Wayne Zachary观察了美国大学空手道俱乐部(karate club)成员之间的
 
 ![Zachary karate club](./data/karate.png)
 
+计算的Q值为0.360
+
 2)悲惨世界
 
 维克多·雨果的小说《悲惨世界》中重要人物的关系网络（小说主人公为Valjean）
 
 ![Les Miserables](./data/miserables.png)
 
+这里参照论文选取的社区数目为11。实际上，根据运行的结果，模块度与划分数目的关系如下图所示：
+
+![Q-k](./data/Q-k.png)
 
