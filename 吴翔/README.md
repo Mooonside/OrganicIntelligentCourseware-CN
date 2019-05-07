@@ -81,7 +81,7 @@ Wayne Zachary观察了美国大学空手道俱乐部(karate club)成员之间的
 
 ![Zachary karate club](./data/karate.png)
 
-计算的Q值为0.360
+二划分，计算的Q值为0.360，与论文给出的结果相符
 
 2)悲惨世界
 
