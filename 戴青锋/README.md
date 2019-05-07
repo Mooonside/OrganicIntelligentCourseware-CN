@@ -60,7 +60,7 @@ of complex network measures and large-scale neuroanatomical connectivity dataset
 <div align=center><img src="./link_matrics.jpg" width="50%" height="50%"></div>
 我们首先分析了每个节点的度，其结果如下表所示
 
-节点|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|
+节点|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16
  :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--|:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 度|8|9|13|9|11|19|2|6|15|16|5|11|5|10|9|7
 
