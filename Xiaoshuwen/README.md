@@ -35,13 +35,34 @@ The identification of influential nodes in complex network can be very challengi
 
 对于无连接的六节点图（unconnected 6-cycle），它对应的无连接聚类系数定义如下：
 
-$$
-cc_{0} = \frac{\lambda_{(0)^{*}}}{\lambda_{(0)}}
-$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=cc_{0}&space;=&space;\frac{\lambda_{(0)^{*}}}{\lambda_{(0)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cc_{0}&space;=&space;\frac{\lambda_{(0)^{*}}}{\lambda_{(0)}}" title="cc_{0} = \frac{\lambda_{(0)^{*}}}{\lambda_{(0)}}" /></a>
 
+其中<a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{(0)^{*}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{(0)^{*}}" title="\lambda_{(0)^{*}}" /></a>是构成6节点圈的闭合4路径的数目，<a href="https://www.codecogs.com/eqnedit.php?latex=\lambda_{(0)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda_{(0)}" title="\lambda_{(0)}" /></a>是4路径的总数目。
 
+对于稀疏连接的六节点图（sparsely connected 6-cycle），其对应的聚类系数定义是：
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=cc_{(1)}&space;=&space;\frac{\lambda_{(1)}^{*}}{\lambda_{(0)}&space;&plus;&space;\lambda_{(1)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cc_{(1)}&space;=&space;\frac{\lambda_{(1)}^{*}}{\lambda_{(0)}&space;&plus;&space;\lambda_{(1)}}" title="cc_{(1)} = \frac{\lambda_{(1)}^{*}}{\lambda_{(0)} + \lambda_{(1)}}" /></a>
 
+对于高度连接的六节点图（highly connected 6-cycle），其对应的聚类系数定义如下：
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=cc_{(2)}&space;=&space;\frac{\lambda_{(2)}^{*}}{\lambda_{(1)}&space;&plus;&space;\lambda_{(2)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cc_{(2)}&space;=&space;\frac{\lambda_{(2)}^{*}}{\lambda_{(1)}&space;&plus;&space;\lambda_{(2)}}" title="cc_{(2)} = \frac{\lambda_{(2)}^{*}}{\lambda_{(1)} + \lambda_{(2)}}" /></a>
+
+对于全连接的六节点图（completely connected 6-cycle），其对应的聚类系数定义如下：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=cc_{(3)}&space;=&space;\frac{\lambda_{(3)}^{*}}{\lambda_{(2)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cc_{(3)}&space;=&space;\frac{\lambda_{(3)}^{*}}{\lambda_{(2)}}" title="cc_{(3)} = \frac{\lambda_{(3)}^{*}}{\lambda_{(2)}}" /></a>
 
 #### 实验结果：
+
+作者在南方妇女网络数据集（southern women network）上进行实验。这个数据集包含了18名女性和14种事件。南部妇女数据集的第一次分析由Davis、Gardner和Gardner Davis等人进行。以访谈的形式，目的是将18名妇女分为不同的群体。他们发现了两个不同的群体，进一步分为核心成员、初级成员和次级成员。图3显示了两个群体的南方女性网络。作者的分析发现所有核心女性都具有影响力，第二组的核心女性也相同。同时提出的方法得到的模型也指出了重要的成员，即找到了网络中的重要的节点。
+
+![图3](figure3.png)
+
+作者在另一个数据集上也进行了实验。该数据集是丁顶级恐怖网络埃弗顿数据集的一个子集。这个子集模拟了26名恐怖分子网络成员在20次不同会议上的出席情况。该子集包含成员和会议之间总共64个连接。表1显示了恐怖集团成员的聚集系数。
+
+![表1](table1.png)
+
+可以看到随着聚类效率的提升，模型所处的置信区间的置信率越来越高。
+
+#### 结论和未来工作
+
+为了分析两分图网络，如果简单地使用单模结构的算法来解决，得到的效果往往不太好。文章提出的聚类系数，能够更好地解决这个问题。从而实现在网络中找到重要的节点这个任务。
