@@ -8,7 +8,8 @@
  
  [Complex Network Measures for Data Set Characterization](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6726419)
  
- Abstract:This paper investigates the adoption of measures used to evaluate complex networks properties 
+ * **Abstract**
+ >This paper investigates the adoption of measures used to evaluate complex networks properties 
  in the characterization of the complexity of data sets in machine learning applications. These measures
  are obtained from a graph based representation of a data set. A graph representation has several 
  interesting properties as it can encode local neighborhood relations, as well as global characteristics
